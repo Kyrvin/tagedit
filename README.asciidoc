@@ -1,0 +1,58 @@
+TagEdit
+-------
+A command line metadata tag editor based on Mutagen.
+TagEdit supports files which use ID3, MP4, or VorbisComments.
+
+Installation
+------------
+To install TagEdit, run the following in a terminal:
+
+-------------------------------------------
+git clone https://github.com/Kyrvin/tagedit
+cd tagedit
+python3 setup.py install
+-------------------------------------------
+
+Usage
+-----
+TagEdit's command line options follow a simple getter/setter format. Each
+supported metadata tag has a getter in the form of "--TAG" and a setter in the
+form of "--set-TAG=VALUE". The values provided by the setters are applied
+before any of the getters run. Getters output the tag's value to standard output
+using the format "TAG=VALUE".
+
+-------------------------------------------
+Usage:
+    tagedit (-h|--help)
+    tagedit (-v|--version)
+    tagedit [options]... <files>...
+
+Options:
+  Get a tag's value.
+    -a --artist
+    -r --album-artist
+    -c --composer
+    -l --album
+    -t --title
+    -g --genre
+    -p --label
+    -s --description
+    -n --track
+    -k --disc
+    -y --year
+    -b --bpm
+
+  Set a tag's value.
+    -A <value>  --set-artist=<value>
+    -R <value>  --set-album-artist=<value>
+    -C <value>  --set-composer=<value>
+    -L <value>  --set-album=<value>
+    -T <value>  --set-title=<value>
+    -G <value>  --set-genre=<value>
+    -P <value>  --set-label=<value>
+    -S <value>  --set-description=<value>
+    -N <value>  --set-track=<value>
+    -K <value>  --set-disc=<value>
+    -Y <value>  --set-year=<value>
+    -B <value>  --set-bpm=<value>
+-------------------------------------------
